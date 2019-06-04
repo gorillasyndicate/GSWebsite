@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.0/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -23,7 +24,7 @@
 
 <body id="page-top">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <a class="navbar-brand link link--GorillaSyndicate" href="#page-top" data-letters="Gorilla Syndicate">Gorilla
             Syndicate</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -36,22 +37,66 @@
                     <a id="navH" class="nav-link" href="#page-top">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a id="navH" class="nav-link" href="#">Link</a>
+                    <a id="navH" class="nav-link" href="#about">About Us</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Intro Text -->
-    <header class="masthead scene">
-        <div id="particles-js">
-        
-        </div>
-    </header>
+    <!-- Intro -->
+    <section class="masthead">
+        <div id="particles-js"></div>
+    </section>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class=" col-lg-4">
+                    <div class="card borders" data-aos="fade-right">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">We offer full web development services, covering front and back end
+                                development. We can design your site our take a design you have and build it for you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4">
+                    <div class="card borders" data-aos="flip-up" data-aos-delay="260">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Design</h5>
+                            <p class="card-text">We offer design services, were we will take your basic idea for your
+                                website and render a Draft of your website.
+                                We can create a website with specific color or design requests or a give you a site we
+                                completely create.
+                                Whether you also need use to build your site or just a design we will create a great
+                                site design for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4">
+                    <div class="card borders" data-aos="fade-left">
+                        <div class="card-body">
+                            <h5 class="card-title">Graphic Design</h5>
+                            <p class="card-text">We also offer graphic design services. These services can range from
+                                anything to logos or custom backgrounds for websites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+    </section>
+
+
 
 
     <script src="particles.js"></script>
     <script src="app.js"></script>
+    <script src="aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
