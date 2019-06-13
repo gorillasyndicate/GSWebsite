@@ -63,7 +63,7 @@ body {
 	position: absolute;
 	z-index: 2;
 	overflow: hidden;
-	color: #36FAFF;
+	color: #0094FF;
 	white-space: nowrap;
 	width: 0%;
 	-webkit-transition: width 0.4s 0.3s;
@@ -122,8 +122,14 @@ body {
 	opacity: 1;
 }
 
-.our-team img {
+.our-team .CS {
     width:  250px;
+	height: 320px;
+	border: 4px solid white;
+}
+
+.our-team .JB {
+    width:  265px;
 	height: 320px;
 	border: 4px solid white;
 }
@@ -195,15 +201,34 @@ body {
 }
 
 .our-team .social li a:hover {
-	color: #36FAFF;
+	color: #0094FF;
 }
 
 .our-team .social li:last-child a {
 	border-right: none;
 }
 
-@media only screen and (max-width: 990px) {
+/* This is the start of media queries. */
+/* This media querie will keep the website the same for slightly smaller screens */
+@media screen and (max-width: 980px) {
 	.our-team {
+		margin-bottom: 30px;
+	}
+	.about {
+		margin-bottom: 20px;
+	}
+}
+
+/* This media querie will alter the website for screens 641-768px wide. */
+@media screen and (max-width: 768px) {
+	.about {
+		margin-bottom: 30px;
+	}
+}
+
+/* This media querie will alter the website for screens 640px and below. */
+@media screen and (max-width: 640px) {
+	.about {
 		margin-bottom: 30px;
 	}
 }
