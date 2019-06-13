@@ -41,16 +41,23 @@
                 <li class="nav-item">
                     <a id="navH" class="nav-link text-light" href="#about">About Us</a>
                 </li>
+                <li class="nav-item">
+                    <a id="navH" class="nav-link text-light" href="#contactUs">Contact Us</a>
+                </li>
             </ul>
         </div>
     </nav>
-
+    <div id="particles-js"></div>
     <!-- Intro -->
-    <section class="masthead">
-        <div id="particles-js"></div>
-    </section>
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="card imgL">
+                <img src="Images/GSBpcopy.png" class="card-img-top">
+            </div>
+        </div>
+    </header>
 
-    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
     <!-- About Section -->
     <section id="about" class="about-section text-center">
         <br><br><br>
@@ -89,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <br><br><br><br><br><br><br>
+            <br><br><br><br><br><br>
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
@@ -99,12 +106,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4"><br><br><br><br><br></div>
+                <div class="col-lg-4"><br><br><br><br><br><br></div>
             </div>
             <!-- Team Page -->
             <div class="row">
                 <!-- <div class=" col-md-3 "></div> -->
-                <div class=" col-md-6 ">
+                <div class=" col-lg-6 ">
                     <div class="our-team">
                         <div class="pic">
                             <img class="JB" src="Images/JB.jpeg">
@@ -122,8 +129,10 @@
                         <div class="card borders social">
                             <div class="card-body">
                                 <h5 class="card-title">About me</h5>
-                                <p class="card-text">Founder and Co-owner of Gorilla Syndicate. Graduated from SMU Code Camp in 2019.
-                                    Currently attending another SMU bootcamp for Graphic Design. Other things that I do, include
+                                <p class="card-text">Founder and Co-owner of Gorilla Syndicate. Graduated from SMU Code
+                                    Camp in 2019.
+                                    Currently attending another SMU bootcamp for Graphic Design. Other things that I do,
+                                    include
                                     writing articles for Icode Magazine and hold conferences for Coders In Hoods. When
                                     I'm not coding I'm Hanging out with my son and family, or doing one of my hobbies,
                                     such as gaming.</p>
@@ -131,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="our-team">
                         <div class="pic">
                             <img class="CS" src="Images/thumbnail_Sifuentes9.jpg">
@@ -151,7 +160,8 @@
                                 <h5 class="card-title">About Me</h5>
                                 <p class="card-text">I am currently a junior at the University of North Texas studying
                                     computer science. While I work part-time I have managed to keep a 4.0 GPA. I love to
-                                    look at something that is broken or that needs to be completed and dive right in. When I'm not working I enjoy gaming and other hobbies.
+                                    look at something that is broken or that needs to be completed and dive right in.
+                                    When I'm not working I enjoy gaming and other hobbies.
                                 </p>
                             </div>
                         </div>
@@ -163,6 +173,50 @@
         </div>
     </section>
 
+    <section id="contactUs" <div class="container">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="card borders " data-aos="flip-down">
+                    <div class="card-body">
+                        Contact Us
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4"><br><br><br><br></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form id="contact-form" class="form" action="#" method="POST" role="form">
+                    <div class="form-group">
+                        <label class="form-label" for="name"></label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your name"
+                            tabindex="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email"></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
+                            tabindex="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="subject"></label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
+                            tabindex="3">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message"></label>
+                        <textarea rows="5" cols="50" name="message" class="form-control" id="message"
+                            placeholder="Message..." tabindex="4" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-start-order">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
 
 
 
@@ -171,6 +225,47 @@
     <script src="aos.js"></script>
     <script>
         AOS.init();
+        $(document).ready(function () {
+            // Test for placeholder support
+            $.support.placeholder = (function () {
+                var i = document.createElement('input');
+                return 'placeholder' in i;
+            })();
+
+            // Hide labels by default if placeholders are supported
+            if ($.support.placeholder) {
+                $('.form-label').each(function () {
+                    $(this).addClass('js-hide-label');
+                });
+
+                // Code for adding/removing classes here
+                $('.form-group').find('input, textarea').on('keyup blur focus', function (e) {
+
+                    // Cache our selectors
+                    var $this = $(this),
+                        $label = $this.parent().find("label");
+
+                    switch (e.type) {
+                        case 'keyup': {
+                            $label.toggleClass('js-hide-label', $this.val() == '');
+                        } break;
+                        case 'blur': {
+                            if ($this.val() == '') {
+                                $label.addClass('js-hide-label');
+                            } else {
+                                $label.removeClass('js-hide-label').addClass('js-unhighlight-label');
+                            }
+                        } break;
+                        case 'focus': {
+                            if ($this.val() !== '') {
+                                $label.removeClass('js-unhighlight-label');
+                            }
+                        } break;
+                        default: break;
+                    }
+                });
+            }
+        });
     </script>
 </body>
 
