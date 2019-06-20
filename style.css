@@ -284,6 +284,9 @@ textarea {
 	.about {
 		margin-bottom: 30px;
 	}
+	.imgL{
+		margin-top: 30px;
+	}
 }
 
 /* This media querie will alter the website for screens 640px and below. */
@@ -291,5 +294,8 @@ textarea {
 @media screen and (max-width: 640px) {
 	.about {
 		margin-bottom: 30px;
+	}
+	.imgL{
+		margin-top: 45px;
 	}
 }
