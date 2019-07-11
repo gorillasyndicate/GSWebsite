@@ -287,6 +287,9 @@ textarea {
 	.imgL{
 		margin-top: 30px;
 	}
+	#mainNav{
+		padding-right: 100px;
+	}
 }
 
 /* This media querie will alter the website for screens 640px and below. */
@@ -298,4 +301,4 @@ textarea {
 	.imgL{
 		margin-top: 20px;
 	}
-}
+	}
