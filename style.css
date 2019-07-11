@@ -2,6 +2,12 @@
 	background-color: #010A0F;
 }
 
+.gsimg {
+	height: 600px;
+	width: 800px;
+	margin-left: 15%;
+}
+
 #particles-js {
 	position: fixed;
 	width: 100%;
